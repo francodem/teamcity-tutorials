@@ -21,13 +21,13 @@ resource "azurerm_public_ip" "teamcityVMPublicIP1" {
   }
 }
 
-resource "azurerm_public_ip" "teamcityVMPublicIP2" {
-  name                = "${var.prefix}-pool-pub-ip2"
-  resource_group_name = var.resource-group-name
-  location            = var.resource-group-location
-  allocation_method   = "Static"
+# resource "azurerm_public_ip" "teamcityVMPublicIP2" {
+#   name                = "${var.prefix}-pool-pub-ip2"
+#   resource_group_name = var.resource-group-name
+#   location            = var.resource-group-location
+#   allocation_method   = "Static"
 
-  tags = {
-    environment = "dev"
-  }
-}
+#   tags = {
+#     environment = "dev"
+#   }
+# }

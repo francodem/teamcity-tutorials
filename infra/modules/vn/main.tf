@@ -45,15 +45,15 @@ resource "azurerm_network_interface" "teamcityNetworkInterface1" {
   }
 }
 
-resource "azurerm_network_interface" "teamcityNetworkInterface2" {
-  name                = "${var.prefix}-nic2"
-  location            = var.azure-resource-group-location
-  resource_group_name = var.azure-resource-group-name
+# resource "azurerm_network_interface" "teamcityNetworkInterface2" {
+#   name                = "${var.prefix}-nic2"
+#   location            = var.azure-resource-group-location
+#   resource_group_name = var.azure-resource-group-name
 
-  ip_configuration {
-    name                          = "teamcity-config"
-    subnet_id                     = azurerm_subnet.teamcityInternal.id
-    private_ip_address_allocation = "Dynamic"
-    public_ip_address_id = var.public-ip-2-id
-  }
-}
+#   ip_configuration {
+#     name                          = "teamcity-config"
+#     subnet_id                     = azurerm_subnet.teamcityInternal.id
+#     private_ip_address_allocation = "Dynamic"
+#     public_ip_address_id = var.public-ip-2-id
+#   }
+# }
